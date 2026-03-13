@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LGM | Alquiler de Vestidos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#catalogo">Saltar al catálogo</a>
+
+    <header class="site-header" id="inicio">
+      <div class="container header-inner">
+        <a class="brand" href="#inicio" aria-label="Ir al inicio">
+          <span class="brand-mark">LGM</span>
+          <span class="brand-sub">Alquiler de Vestidos</span>
+        </a>
+
+        <div class="header-actions">
+          <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar tema">
+            <span class="theme-toggle-icon" aria-hidden="true">☾</span>
+            <span class="theme-toggle-text">Modo oscuro</span>
+          </button>
+        </div>
+
+        <button class="nav-toggle" id="navToggle" aria-controls="siteNav" aria-expanded="false">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="sr-only">Abrir menú</span>
+        </button>
+
+        <nav class="site-nav" id="siteNav">
+          <a class="nav-link" href="#inicio">Inicio</a>
+          <a class="nav-link" href="#catalogo">Catálogo</a>
+          <a class="nav-link" href="#contacto">Contacto</a>
+          <a class="nav-link" href="#ubicacion">Ubicación</a>
+          <a class="nav-link" href="#preguntas">Preguntas</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-label="Presentación">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <h1>Alquiler de Vestidos LGM</h1>
+            <p>
+              Elegancia para tus momentos especiales. Elige tu estilo, consulta disponibilidad y
+              reserva.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#catalogo">Ver catálogo</a>
+              <a class="btn btn-ghost" href="#contacto">Consultar</a>
+            </div>
+            <div class="hero-badges" aria-label="Beneficios">
+              <span class="badge">Entrega rápida</span>
+              <span class="badge">Asesoría</span>
+              <span class="badge">Tallas variadas</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="catalogo">
+        <div class="container">
+          <div class="section-head">
+            <h2>Catálogo</h2>
+            <p>Selecciona un vestido para ver más grande o consultar disponibilidad.</p>
+          </div>
+
+          <div class="grid">
+            <article class="card" data-product-id="blanco">
+              <div class="card-media">
+                <button
+                  class="image-button"
+                  type="button"
+                  data-open-gallery
+                  data-images="Images/1773264982359.png,Images/1773264994149.png"
+                  data-title="Vestido Blanco Elegante"
+                >
+                  <img
+                    src="Images/1773264982359.png"
+                    alt="Vestido blanco elegante"
+                    loading="lazy"
+                  />
+                </button>
+                <div class="thumbs" aria-label="Miniaturas">
+                  <button
+                    class="thumb is-active"
+                    type="button"
+                    data-thumb
+                    data-target="Images/1773264982359.png"
+                    aria-label="Ver imagen 1"
+                  >
+                    <img src="Images/1773264982359.png" alt="Miniatura 1" loading="lazy" />
+                  </button>
+                  <button
+                    class="thumb"
+                    type="button"
+                    data-thumb
+                    data-target="Images/1773264994149.png"
+                    aria-label="Ver imagen 2"
+                  >
+                    <img src="Images/1773264994149.png" alt="Miniatura 2" loading="lazy" />
+                  </button>
+                </div>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Vestido Blanco Elegante</h3>
+                <p class="card-meta">Ideal para quinceañera o gala</p>
+                <div class="card-row">
+                  <span class="price">2500 CUP / día</span>
+                  <a class="btn btn-small" href="#contacto" data-prefill="Vestido Blanco Elegante">
+                    Consultar disponibilidad
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card" data-product-id="rojo">
+              <div class="card-media">
+                <button
+                  class="image-button"
+                  type="button"
+                  data-open-modal
+                  data-src="Images/1773265172687.png"
+                  data-title="Vestido Rojo Fiesta"
+                >
+                  <img src="Images/1773265172687.png" alt="Vestido rojo" loading="lazy" />
+                </button>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Vestido Rojo Fiesta</h3>
+                <p class="card-meta">Espalda abierta con tiras</p>
+                <div class="card-row">
+                  <span class="price">2400 CUP / día</span>
+                  <a class="btn btn-small" href="#contacto" data-prefill="Vestido Rojo Fiesta">
+                    Consultar disponibilidad
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card" data-product-id="rosa">
+              <div class="card-media">
+                <button
+                  class="image-button"
+                  type="button"
+                  data-open-modal
+                  data-src="Images/1773266217023.png"
+                  data-title="Vestido Rosa Noche"
+                >
+                  <img src="Images/1773266217023.png" alt="Vestido rosa" loading="lazy" />
+                </button>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Vestido Rosa Noche</h3>
+                <p class="card-meta">Brillo elegante y corte sirena</p>
+                <div class="card-row">
+                  <span class="price">2600 CUP / día</span>
+                  <a class="btn btn-small" href="#contacto" data-prefill="Vestido Rosa Noche">
+                    Consultar disponibilidad
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card" data-product-id="azul">
+              <div class="card-media">
+                <button
+                  class="image-button"
+                  type="button"
+                  data-open-modal
+                  data-src="Images/1773266283324.png"
+                  data-title="Vestido Azul Casual"
+                >
+                  <img src="Images/1773266283324.png" alt="Vestido azul" loading="lazy" />
+                </button>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Vestido Azul Casual</h3>
+                <p class="card-meta">Conjunto moderno y versátil</p>
+                <div class="card-row">
+                  <span class="price">3000 CUP / día</span>
+                  <a class="btn btn-small" href="#contacto" data-prefill="Vestido Azul Casual">
+                    Consultar disponibilidad
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="contacto">
+        <div class="container">
+          <div class="section-head">
+            <h2>Contacto</h2>
+            <p>Escríbenos y te confirmamos disponibilidad, tallas y costo.</p>
+          </div>
+
+          <div class="contact">
+            <div class="contact-card">
+              <h3>Consulta rápida</h3>
+              <form id="contactForm">
+                <label class="field">
+                  <span>Nombre</span>
+                  <input type="text" name="nombre" required placeholder="Tu nombre" />
+                </label>
+                <label class="field">
+                  <span>Teléfono</span>
+                  <input
+                    type="tel"
+                    name="telefono"
+                    id="telefono"
+                    required
+                    placeholder="5 00000000 (con o sin +53)"
+                    data-normalize-phone
+                  />
+                </label>
+                <label class="field">
+                  <span>Mensaje</span>
+                  <textarea
+                    name="mensaje"
+                    id="mensaje"
+                    rows="4"
+                    required
+                    placeholder="Dime cuál vestido te interesa y para qué fecha"
+                  ></textarea>
+                </label>
+                <button class="btn btn-primary" type="submit">Enviar</button>
+                <p class="form-note" id="formNote" aria-live="polite"></p>
+              </form>
+            </div>
+
+            <div class="contact-card">
+              <h3>Información</h3>
+              <p class="contact-line"><strong>Negocio:</strong> LGM</p>
+              <p class="contact-line"><strong>Horario:</strong> Lun - Sáb, 9:00am - 6:00pm</p>
+              <p class="contact-line">
+                <strong>WhatsApp:</strong>
+                <a
+                  href="https://wa.me/5356164805"
+                  class="link"
+                  aria-label="WhatsApp"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  +53 56164805
+                </a>
+              </p>
+              <p class="contact-line">
+                <strong>Dirección:</strong> Baracoa, Bohorque Calle 9
+              </p>
+              <div class="divider"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="ubicacion">
+        <div class="container">
+          <div class="section-head">
+            <h2>Ubicación</h2>
+            <p>Pin en coordenadas 20.327760185377098, -74.48816447832871 (vista satelital).</p>
+          </div>
+
+          <div class="map-card" aria-label="Mapa">
+            <iframe
+              class="map-iframe"
+              title="Google Maps - LGM (Bohorque, Baracoa, Guantánamo, Cuba)"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=20.327760185377098%2C-74.48816447832871&z=18&t=k&output=embed"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="preguntas">
+        <div class="container">
+          <div class="section-head">
+            <h2>Preguntas frecuentes</h2>
+            <p>Respuestas rápidas antes de reservar.</p>
+          </div>
+
+          <div class="faq" role="list">
+            <details class="faq-item" open>
+              <summary class="faq-question">¿Cómo reservo un vestido?</summary>
+              <div class="faq-answer">
+                Escríbenos por WhatsApp o por el formulario con la fecha del evento y el vestido que
+                deseas. Te confirmamos disponibilidad y coordinamos.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">¿Qué debo llevar para la prueba?</summary>
+              <div class="faq-answer">
+                Si puedes, trae el tipo de zapato que usarás y cualquier accesorio para verificar el
+                ajuste final.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">¿Cuánto tiempo es el alquiler?</summary>
+              <div class="faq-answer">
+                Normalmente es por día. Si necesitas más días, lo coordinamos según disponibilidad.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">¿Dónde están ubicados?</summary>
+              <div class="faq-answer">
+                Baracoa, Bohorque Calle 9. Puedes ver el mapa en la sección “Ubicación”.
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <div class="footer-brand">LGM</div>
+          <div class="muted">Alquiler de vestidos</div>
+        </div>
+        <div class="footer-links" aria-label="Enlaces">
+          <a class="link" href="#inicio">Inicio</a>
+          <a class="link" href="#catalogo">Catálogo</a>
+          <a class="link" href="#contacto">Contacto</a>
+          <a class="link" href="#ubicacion">Ubicación</a>
+          <a class="link" href="#preguntas">Preguntas</a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal" id="imageModal" aria-hidden="true" role="dialog" aria-label="Imagen ampliada">
+      <div class="modal-backdrop" data-close-modal></div>
+      <div class="modal-panel" role="document">
+        <button class="modal-close" type="button" data-close-modal aria-label="Cerrar">
+          ✕
+        </button>
+        <div class="modal-head">
+          <div class="modal-title" id="modalTitle"></div>
+          <div class="modal-controls">
+            <button class="icon-btn" type="button" id="prevBtn" aria-label="Anterior">
+              ‹
+            </button>
+            <button class="icon-btn" type="button" id="nextBtn" aria-label="Siguiente">
+              ›
+            </button>
+          </div>
+        </div>
+        <div class="modal-body">
+          <img id="modalImage" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <a
+      class="wa-float"
+      href="https://wa.me/5356164805"
+      target="_blank"
+      rel="noreferrer"
+      aria-label="Chatear por WhatsApp"
+    >
+      WhatsApp
+    </a>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
