@@ -21,6 +21,36 @@
 
   const THEME_KEY = 'lgm-theme';
 
+  // Lazy loading para imágenes
+  const setupLazyLoading = () => {
+    const lazyImages = document.querySelectorAll('img[data-src]');
+    
+    if ('IntersectionObserver' in window) {
+      const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            img.src = img.dataset.src;
+            img.classList.add('loaded');
+            imageObserver.unobserve(img);
+          }
+        });
+      }, {
+        rootMargin: '50px 0px'
+      });
+
+      lazyImages.forEach(img => {
+        imageObserver.observe(img);
+      });
+    } else {
+      // Fallback para navegadores antiguos
+      lazyImages.forEach(img => {
+        img.src = img.dataset.src;
+        img.classList.add('loaded');
+      });
+    }
+  };
+
   const normalizeCubanPhone = (raw) => {
     if (!raw) return '';
     let cleaned = raw.replace(/[^\d]/g, '');
@@ -232,4 +262,5 @@
   }
 
   setupPhoneNormalization();
+  setupLazyLoading();
 })();
