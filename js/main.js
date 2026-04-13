@@ -12,9 +12,9 @@
   const prevBtn = document.getElementById('prevBtn');
   const nextBtn = document.getElementById('nextBtn');
 
-  const contactForm = document.getElementById('contactForm');
-  const formNote = document.getElementById('formNote');
-  const messageField = document.getElementById('mensaje');
+
+  const filterButtons = document.querySelectorAll('[data-filter]');
+  const catalogCards = document.querySelectorAll('.card[data-category]');
 
   let gallery = [];
   let galleryIndex = 0;
@@ -51,34 +51,30 @@
     }
   };
 
-  const normalizeCubanPhone = (raw) => {
-    if (!raw) return '';
-    let cleaned = raw.replace(/[^\d]/g, '');
-    if (cleaned.startsWith('53')) cleaned = cleaned.slice(2);
-    if (cleaned.length === 8 && cleaned[0] === '5') {
-      return `+53 ${cleaned.slice(0,1)} ${cleaned.slice(1,4)} ${cleaned.slice(4)}`;
-    }
-    return raw;
-  };
 
-  const setupPhoneNormalization = () => {
-    const phoneInputs = document.querySelectorAll('[data-normalize-phone]');
-    phoneInputs.forEach((input) => {
-      input.addEventListener('blur', () => {
-        const normalized = normalizeCubanPhone(input.value);
-        if (normalized !== input.value) {
-          input.value = normalized;
-        }
+  const setupCatalogFilters = () => {
+    if (!filterButtons.length || !catalogCards.length) return;
+
+    const applyFilter = (filter) => {
+      catalogCards.forEach((card) => {
+        const category = card.getAttribute('data-category') || '';
+        const show = filter === 'all' ? true : category === filter;
+        card.classList.toggle('is-hidden', !show);
       });
-      input.addEventListener('paste', (e) => {
-        setTimeout(() => {
-          const normalized = normalizeCubanPhone(input.value);
-          if (normalized !== input.value) {
-            input.value = normalized;
-          }
-        }, 10);
+    };
+
+    filterButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter') || 'all';
+
+        filterButtons.forEach((b) => b.classList.remove('is-active'));
+        btn.classList.add('is-active');
+
+        applyFilter(filter);
       });
     });
+
+    applyFilter('all');
   };
 
   const applyTheme = (theme) => {
@@ -178,6 +174,14 @@
 
     if (!(target instanceof Element)) return;
 
+    const modalNav = target.closest('[data-modal-nav]');
+    if (modalNav) {
+      const dir = modalNav.getAttribute('data-modal-nav');
+      if (dir === 'prev') showIndex(galleryIndex - 1);
+      if (dir === 'next') showIndex(galleryIndex + 1);
+      return;
+    }
+
     const openModalBtn = target.closest('[data-open-modal]');
     if (openModalBtn) {
       const src = openModalBtn.getAttribute('data-src') || '';
@@ -231,11 +235,11 @@
 
     const prefillLink = target.closest('[data-prefill]');
     if (prefillLink) {
-      const dress = prefillLink.getAttribute('data-prefill') || '';
-      if (dress && messageField) {
-        const base = messageField.value.trim();
-        const prefix = `Hola, me interesa el ${dress}. `;
-        messageField.value = base ? `${prefix}${base}` : prefix;
+      const dressId = prefillLink.getAttribute('data-prefill') || '';
+      if (dressId) {
+        const message = `Hola, me interesa el vestido ${dressId}. ¿Está disponible para (fecha)?`;
+        const waUrl = `https://wa.me/5356164805?text=${encodeURIComponent(message)}`;
+        window.open(waUrl, '_blank', 'noreferrer');
       }
     }
   });
@@ -252,15 +256,6 @@
     if (e.key === 'ArrowRight') showIndex(galleryIndex + 1);
   });
 
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      if (formNote) {
-        formNote.textContent = 'Mensaje listo. Copia y envíalo por WhatsApp o tu canal preferido.';
-      }
-    });
-  }
-
-  setupPhoneNormalization();
   setupLazyLoading();
+  setupCatalogFilters();
 })();

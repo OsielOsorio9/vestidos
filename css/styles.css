@@ -322,47 +322,7 @@ html[data-theme='light'] .site-header {
   pointer-events: none;
 }
 
-.faq {
-  display: grid;
-  gap: 12px;
-}
 
-.faq-item {
-  border: 1px solid var(--stroke);
-  background: rgba(255, 255, 255, 0.04);
-  border-radius: var(--radius);
-  padding: 2px;
-}
-
-.faq-question {
-  cursor: pointer;
-  list-style: none;
-  padding: 14px 14px;
-  font-weight: 700;
-}
-
-.faq-question::-webkit-details-marker {
-  display: none;
-}
-
-.faq-answer {
-  padding: 0 14px 14px;
-  color: var(--muted);
-}
-
-.map-card {
-  border: 1px solid var(--stroke);
-  background: rgba(255, 255, 255, 0.04);
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-}
-
-.map-iframe {
-  width: 100%;
-  height: 360px;
-  border: 0;
-}
 
 .wa-float {
   position: fixed;
@@ -410,6 +370,34 @@ html[data-theme='light'] .site-header {
   color: var(--muted);
 }
 
+.catalog-filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.chip {
+  height: 38px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid var(--stroke);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--muted);
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.chip.is-active {
+  background: rgba(243, 182, 200, 0.16);
+  color: var(--text);
+  border-color: rgba(243, 182, 200, 0.45);
+}
+
+.card.is-hidden {
+  display: none;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -426,6 +414,28 @@ html[data-theme='light'] .site-header {
 
 .card-media {
   position: relative;
+}
+
+.card-tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(11, 11, 16, 0.82);
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  pointer-events: none;
+}
+
+.card-tag.is-kids {
+  background: rgba(72, 217, 117, 0.32);
+  border-color: rgba(72, 217, 117, 0.6);
+  color: rgba(236, 255, 242, 0.98);
 }
 
 .image-button {
@@ -503,64 +513,6 @@ html[data-theme='light'] .site-header {
   color: rgba(241, 215, 161, 0.92);
 }
 
-.contact {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
-
-.contact-card {
-  border: 1px solid var(--stroke);
-  background: rgba(255, 255, 255, 0.04);
-  border-radius: var(--radius);
-  padding: 18px;
-}
-
-.contact-card h3 {
-  margin: 0 0 12px;
-  font-size: 18px;
-}
-
-.field {
-  display: grid;
-  gap: 6px;
-  margin-bottom: 12px;
-}
-
-.field span {
-  color: var(--muted);
-  font-size: 13px;
-}
-
-input,
-textarea {
-  width: 100%;
-  border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(0, 0, 0, 0.25);
-  padding: 12px 12px;
-  color: var(--text);
-  outline: none;
-  font-family: inherit;
-}
-
-input:focus,
-textarea:focus {
-  border-color: rgba(243, 182, 200, 0.75);
-  box-shadow: 0 0 0 4px rgba(243, 182, 200, 0.15);
-}
-
-.form-note {
-  margin: 10px 0 0;
-  min-height: 20px;
-  color: var(--muted);
-  font-size: 13px;
-}
-
-.contact-line {
-  margin: 0 0 10px;
-  color: var(--muted);
-}
 
 .divider {
   height: 1px;
@@ -666,6 +618,15 @@ textarea:focus {
   gap: 8px;
 }
 
+.modal-controls.is-bottom {
+  position: sticky;
+  bottom: 0;
+  justify-content: center;
+  padding: 10px 12px;
+  border-top: 1px solid var(--stroke);
+  background: rgba(11, 11, 16, 0.92);
+}
+
 .icon-btn {
   border: 1px solid var(--stroke);
   background: rgba(255, 255, 255, 0.06);
@@ -708,14 +669,15 @@ textarea:focus {
     height: 380px;
   }
 
-  .contact {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (max-width: 640px) {
   .container {
     width: min(1120px, calc(100% - 28px));
+  }
+
+  .site-header {
+    backdrop-filter: none;
   }
 
   .hero {
@@ -757,10 +719,11 @@ textarea:focus {
 
   .grid {
     grid-template-columns: 1fr;
+    gap: 14px;
   }
 
   .card-media img {
-    height: 420px;
+    height: 360px;
   }
 
   .thumb img {
@@ -778,14 +741,19 @@ textarea:focus {
   }
 
   .modal-head {
-    padding-right: 16px;
+    padding-right: 56px;
+  }
+
+  .modal-controls {
+    display: none;
+  }
+
+  .modal-controls.is-bottom {
+    display: flex;
   }
 
   .modal-body img {
     max-height: calc(100vh - 180px);
   }
 
-  .map-iframe {
-    height: 320px;
-  }
 }

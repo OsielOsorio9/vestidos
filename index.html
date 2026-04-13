@@ -39,9 +39,6 @@
         <nav class="site-nav" id="siteNav">
           <a class="nav-link" href="#inicio">Inicio</a>
           <a class="nav-link" href="#catalogo">Catálogo</a>
-          <a class="nav-link" href="#contacto">Contacto</a>
-          <a class="nav-link" href="#ubicacion">Ubicación</a>
-          <a class="nav-link" href="#preguntas">Preguntas</a>
         </nav>
       </div>
     </header>
@@ -72,142 +69,310 @@
         <div class="container">
           <div class="section-head">
             <h2>Catálogo</h2>
-            <p>Selecciona un vestido para ver más grande o consultar disponibilidad.</p>
+            <p>Toca una foto para ver más grande o consultar.</p>
+          </div>
+
+          <div class="catalog-filters" aria-label="Categorías">
+            <button class="chip is-active" type="button" data-filter="all">Todos</button>
+            <button class="chip" type="button" data-filter="adultas">Adultas</button>
+            <button class="chip" type="button" data-filter="ninas">Niñas</button>
           </div>
 
           <div class="grid">
-            <article class="card" data-product-id="blanco">
+            <article class="card" data-product-id="#01" data-category="adultas">
               <div class="card-media">
                 <button
                   class="image-button"
                   type="button"
                   data-open-gallery
-                  data-images="Images/1773264982359.png,Images/1773264994149.png"
-                  data-title="Vestido Blanco Elegante"
+                  data-images="Images/catalogo/BLANCO F.jpg,Images/catalogo/BLANCO D.jpg"
+                  data-title="#01"
                 >
                   <img
                     class="lazy-img"
-                    data-src="Images/1773264982359.png"
-                    alt="Vestido blanco elegante"
+                    data-src="Images/catalogo/BLANCO F.jpg"
+                    alt="Vestido #01"
                     loading="lazy"
+                    decoding="async"
                   />
                 </button>
-                <div class="thumbs" aria-label="Miniaturas">
-                  <button
-                    class="thumb is-active"
-                    type="button"
-                    data-thumb
-                    data-target="Images/1773264982359.png"
-                    aria-label="Ver imagen 1"
-                  >
-                    <img class="lazy-img" data-src="Images/1773264982359.png" alt="Miniatura 1" loading="lazy" />
-                  </button>
-                  <button
-                    class="thumb"
-                    type="button"
-                    data-thumb
-                    data-target="Images/1773264994149.png"
-                    aria-label="Ver imagen 2"
-                  >
-                    <img class="lazy-img" data-src="Images/1773264994149.png" alt="Miniatura 2" loading="lazy" />
-                  </button>
-                </div>
               </div>
               <div class="card-body">
-                <h3 class="card-title">Vestido Blanco Elegante</h3>
-                <p class="card-meta">Ideal para quinceañera o gala</p>
                 <div class="card-row">
-                  <span class="price">2500 CUP / día</span>
-                  <a class="btn btn-small" href="#contacto" data-prefill="Vestido Blanco Elegante">
+                  <span class="price">Precio: Consultar</span>
+                  <a class="btn btn-small" href="#contacto" data-prefill="#01">
                     Consultar disponibilidad
                   </a>
                 </div>
               </div>
             </article>
 
-            <article class="card" data-product-id="rojo">
+            <article class="card" data-product-id="#02" data-category="adultas">
               <div class="card-media">
                 <button
                   class="image-button"
                   type="button"
-                  data-open-modal
-                  data-src="Images/1773265172687.png"
-                  data-title="Vestido Rojo Fiesta"
+                  data-open-gallery
+                  data-images="Images/catalogo/ROJO F.jpg,Images/catalogo/ROJO D.jpg"
+                  data-title="#02"
                 >
                   <img
                     class="lazy-img"
-                    data-src="Images/1773265172687.png"
-                    alt="Vestido rojo"
+                    data-src="Images/catalogo/ROJO F.jpg"
+                    alt="Vestido #02"
                     loading="lazy"
+                    decoding="async"
                   />
                 </button>
               </div>
               <div class="card-body">
-                <h3 class="card-title">Vestido Rojo Fiesta</h3>
-                <p class="card-meta">Espalda abierta con tiras</p>
                 <div class="card-row">
-                  <span class="price">2400 CUP / día</span>
-                  <a class="btn btn-small" href="#contacto" data-prefill="Vestido Rojo Fiesta">
+                  <span class="price">Precio: Consultar</span>
+                  <a class="btn btn-small" href="#contacto" data-prefill="#02">
                     Consultar disponibilidad
                   </a>
                 </div>
               </div>
             </article>
 
-            <article class="card" data-product-id="rosa">
+            <article class="card" data-product-id="#03" data-category="adultas">
               <div class="card-media">
                 <button
                   class="image-button"
                   type="button"
-                  data-open-modal
-                  data-src="Images/1773266217023.png"
-                  data-title="Vestido Rosa Noche"
+                  data-open-gallery
+                  data-images="Images/catalogo/ROSA F.jpg,Images/catalogo/ROSA D.jpg"
+                  data-title="#03"
                 >
                   <img
                     class="lazy-img"
-                    data-src="Images/1773266217023.png"
-                    alt="Vestido rosa"
+                    data-src="Images/catalogo/ROSA F.jpg"
+                    alt="Vestido #03"
                     loading="lazy"
+                    decoding="async"
                   />
                 </button>
               </div>
               <div class="card-body">
-                <h3 class="card-title">Vestido Rosa Noche</h3>
-                <p class="card-meta">Brillo elegante y corte sirena</p>
                 <div class="card-row">
-                  <span class="price">2600 CUP / día</span>
-                  <a class="btn btn-small" href="#contacto" data-prefill="Vestido Rosa Noche">
+                  <span class="price">Precio: Consultar</span>
+                  <a class="btn btn-small" href="#contacto" data-prefill="#03">
                     Consultar disponibilidad
                   </a>
                 </div>
               </div>
             </article>
 
-            <article class="card" data-product-id="azul">
+            <article class="card" data-product-id="#04" data-category="adultas">
               <div class="card-media">
                 <button
                   class="image-button"
                   type="button"
-                  data-open-modal
-                  data-src="Images/1773266283324.png"
-                  data-title="Vestido Azul Casual"
+                  data-open-gallery
+                  data-images="Images/catalogo/AZUL F.jpg,Images/catalogo/AZUL D.jpg"
+                  data-title="#04"
                 >
                   <img
                     class="lazy-img"
-                    data-src="Images/1773266283324.png"
-                    alt="Vestido azul"
+                    data-src="Images/catalogo/AZUL F.jpg"
+                    alt="Vestido #04"
                     loading="lazy"
+                    decoding="async"
                   />
                 </button>
               </div>
               <div class="card-body">
-                <h3 class="card-title">Vestido Azul Casual</h3>
-                <p class="card-meta">Conjunto moderno y versátil</p>
                 <div class="card-row">
-                  <span class="price">3000 CUP / día</span>
-                  <a class="btn btn-small" href="#contacto" data-prefill="Vestido Azul Casual">
+                  <span class="price">Precio: Consultar</span>
+                  <a class="btn btn-small" href="#contacto" data-prefill="#04">
                     Consultar disponibilidad
                   </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card" data-product-id="#05" data-category="adultas">
+              <div class="card-media">
+                <button
+                  class="image-button"
+                  type="button"
+                  data-open-gallery
+                  data-images="Images/catalogo/MARRON F.jpg,Images/catalogo/MARRON D.jpg"
+                  data-title="#05"
+                >
+                  <img
+                    class="lazy-img"
+                    data-src="Images/catalogo/MARRON F.jpg"
+                    alt="Vestido #05"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </button>
+              </div>
+              <div class="card-body">
+                <div class="card-row">
+                  <span class="price">Precio: Consultar</span>
+                  <a class="btn btn-small" href="#contacto" data-prefill="#05">Consultar disponibilidad</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card" data-product-id="#06" data-category="adultas">
+              <div class="card-media">
+                <button
+                  class="image-button"
+                  type="button"
+                  data-open-gallery
+                  data-images="Images/catalogo/VERDE F.jpg,Images/catalogo/VERDE D.jpg"
+                  data-title="#06"
+                >
+                  <img
+                    class="lazy-img"
+                    data-src="Images/catalogo/VERDE F.jpg"
+                    alt="Vestido #06"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </button>
+              </div>
+              <div class="card-body">
+                <div class="card-row">
+                  <span class="price">Precio: Consultar</span>
+                  <a class="btn btn-small" href="#contacto" data-prefill="#06">Consultar disponibilidad</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card" data-product-id="#07" data-category="adultas">
+              <div class="card-media">
+                <button
+                  class="image-button"
+                  type="button"
+                  data-open-gallery
+                  data-images="Images/catalogo/VIOLETA F.jpg,Images/catalogo/VIOLETA ARO.jpg"
+                  data-title="#07"
+                >
+                  <img
+                    class="lazy-img"
+                    data-src="Images/catalogo/VIOLETA F.jpg"
+                    alt="Vestido #07"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </button>
+              </div>
+              <div class="card-body">
+                <div class="card-row">
+                  <span class="price">Precio: Consultar</span>
+                  <a class="btn btn-small" href="#contacto" data-prefill="#07">Consultar disponibilidad</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card" data-product-id="#08" data-category="ninas">
+              <div class="card-media">
+                <div class="card-tag is-kids">Niña</div>
+                <button
+                  class="image-button"
+                  type="button"
+                  data-open-gallery
+                  data-images="Images/catalogo/NIÑA 1.jpg"
+                  data-title="#08"
+                >
+                  <img
+                    class="lazy-img"
+                    data-src="Images/catalogo/NIÑA 1.jpg"
+                    alt="Vestido #08"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </button>
+              </div>
+              <div class="card-body">
+                <div class="card-row">
+                  <span class="price">Precio: Consultar</span>
+                  <a class="btn btn-small" href="#contacto" data-prefill="#08">Consultar disponibilidad</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card" data-product-id="#09" data-category="ninas">
+              <div class="card-media">
+                <div class="card-tag is-kids">Niña</div>
+                <button
+                  class="image-button"
+                  type="button"
+                  data-open-gallery
+                  data-images="Images/catalogo/NIÑA 2.jpg"
+                  data-title="#09"
+                >
+                  <img
+                    class="lazy-img"
+                    data-src="Images/catalogo/NIÑA 2.jpg"
+                    alt="Vestido #09"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </button>
+              </div>
+              <div class="card-body">
+                <div class="card-row">
+                  <span class="price">Precio: Consultar</span>
+                  <a class="btn btn-small" href="#contacto" data-prefill="#09">Consultar disponibilidad</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card" data-product-id="#10" data-category="ninas">
+              <div class="card-media">
+                <div class="card-tag is-kids">Niña</div>
+                <button
+                  class="image-button"
+                  type="button"
+                  data-open-gallery
+                  data-images="Images/catalogo/NIÑA 3.jpg"
+                  data-title="#10"
+                >
+                  <img
+                    class="lazy-img"
+                    data-src="Images/catalogo/NIÑA 3.jpg"
+                    alt="Vestido #10"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </button>
+              </div>
+              <div class="card-body">
+                <div class="card-row">
+                  <span class="price">Precio: Consultar</span>
+                  <a class="btn btn-small" href="#contacto" data-prefill="#10">Consultar disponibilidad</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card" data-product-id="#11" data-category="ninas">
+              <div class="card-media">
+                <div class="card-tag is-kids">Niña</div>
+                <button
+                  class="image-button"
+                  type="button"
+                  data-open-gallery
+                  data-images="Images/catalogo/NIÑA 4.jpg"
+                  data-title="#11"
+                >
+                  <img
+                    class="lazy-img"
+                    data-src="Images/catalogo/NIÑA 4.jpg"
+                    alt="Vestido #11"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </button>
+              </div>
+              <div class="card-body">
+                <div class="card-row">
+                  <span class="price">Precio: Consultar</span>
+                  <a class="btn btn-small" href="#contacto" data-prefill="#11">Consultar disponibilidad</a>
                 </div>
               </div>
             </article>
@@ -215,131 +380,6 @@
         </div>
       </section>
 
-      <section class="section section-alt" id="contacto">
-        <div class="container">
-          <div class="section-head">
-            <h2>Contacto</h2>
-            <p>Escríbenos y te confirmamos disponibilidad, tallas y costo.</p>
-          </div>
-
-          <div class="contact">
-            <div class="contact-card">
-              <h3>Consulta rápida</h3>
-              <form id="contactForm">
-                <label class="field">
-                  <span>Nombre</span>
-                  <input type="text" name="nombre" required placeholder="Tu nombre" />
-                </label>
-                <label class="field">
-                  <span>Teléfono</span>
-                  <input
-                    type="tel"
-                    name="telefono"
-                    id="telefono"
-                    required
-                    placeholder="5 00000000 (con o sin +53)"
-                    data-normalize-phone
-                  />
-                </label>
-                <label class="field">
-                  <span>Mensaje</span>
-                  <textarea
-                    name="mensaje"
-                    id="mensaje"
-                    rows="4"
-                    required
-                    placeholder="Dime cuál vestido te interesa y para qué fecha"
-                  ></textarea>
-                </label>
-                <button class="btn btn-primary" type="submit">Enviar</button>
-                <p class="form-note" id="formNote" aria-live="polite"></p>
-              </form>
-            </div>
-
-            <div class="contact-card">
-              <h3>Información</h3>
-              <p class="contact-line"><strong>Negocio:</strong> LGM</p>
-              <p class="contact-line"><strong>Horario:</strong> Lun - Sáb, 9:00am - 6:00pm</p>
-              <p class="contact-line">
-                <strong>WhatsApp:</strong>
-                <a
-                  href="https://wa.me/5356164805"
-                  class="link"
-                  aria-label="WhatsApp"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  +53 56164805
-                </a>
-              </p>
-              <p class="contact-line">
-                <strong>Dirección:</strong> Baracoa, Bohorque Calle 9
-              </p>
-              <div class="divider"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-alt" id="ubicacion">
-        <div class="container">
-          <div class="section-head">
-            <h2>Ubicación</h2>
-            <p>Pin en coordenadas 20.327760185377098, -74.48816447832871 (vista satelital).</p>
-          </div>
-
-          <div class="map-card" aria-label="Mapa">
-            <iframe
-              class="map-iframe"
-              title="Google Maps - LGM (Bohorque, Baracoa, Guantánamo, Cuba)"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps?q=20.327760185377098%2C-74.48816447832871&z=18&t=k&output=embed"
-            ></iframe>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="preguntas">
-        <div class="container">
-          <div class="section-head">
-            <h2>Preguntas frecuentes</h2>
-            <p>Respuestas rápidas antes de reservar.</p>
-          </div>
-
-          <div class="faq" role="list">
-            <details class="faq-item" open>
-              <summary class="faq-question">¿Cómo reservo un vestido?</summary>
-              <div class="faq-answer">
-                Escríbenos por WhatsApp o por el formulario con la fecha del evento y el vestido que
-                deseas. Te confirmamos disponibilidad y coordinamos.
-              </div>
-            </details>
-
-            <details class="faq-item">
-              <summary class="faq-question">¿Qué debo llevar para la prueba?</summary>
-              <div class="faq-answer">
-                Si puedes, trae el tipo de zapato que usarás y cualquier accesorio para verificar el
-                ajuste final.
-              </div>
-            </details>
-
-            <details class="faq-item">
-              <summary class="faq-question">¿Cuánto tiempo es el alquiler?</summary>
-              <div class="faq-answer">
-                Normalmente es por día. Si necesitas más días, lo coordinamos según disponibilidad.
-              </div>
-            </details>
-
-            <details class="faq-item">
-              <summary class="faq-question">¿Dónde están ubicados?</summary>
-              <div class="faq-answer">
-                Baracoa, Bohorque Calle 9. Puedes ver el mapa en la sección “Ubicación”.
-              </div>
-            </details>
-          </div>
-        </div>
-      </section>
     </main>
 
     <footer class="site-footer">
@@ -351,9 +391,6 @@
         <div class="footer-links" aria-label="Enlaces">
           <a class="link" href="#inicio">Inicio</a>
           <a class="link" href="#catalogo">Catálogo</a>
-          <a class="link" href="#contacto">Contacto</a>
-          <a class="link" href="#ubicacion">Ubicación</a>
-          <a class="link" href="#preguntas">Preguntas</a>
         </div>
       </div>
     </footer>
@@ -377,6 +414,14 @@
         </div>
         <div class="modal-body">
           <img id="modalImage" alt="" />
+        </div>
+        <div class="modal-controls is-bottom" aria-label="Controles">
+          <button class="icon-btn" type="button" data-modal-nav="prev" aria-label="Anterior">
+            ‹
+          </button>
+          <button class="icon-btn" type="button" data-modal-nav="next" aria-label="Siguiente">
+            ›
+          </button>
         </div>
       </div>
     </div>
