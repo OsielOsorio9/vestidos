@@ -514,6 +514,29 @@ html[data-theme='light'] .site-header {
 }
 
 
+.contact {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.contact-card {
+  border: 1px solid var(--stroke);
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: var(--radius);
+  padding: 18px;
+}
+
+.contact-card h3 {
+  margin: 0 0 12px;
+  font-size: 18px;
+}
+
+.contact-line {
+  margin: 0 0 10px;
+  color: var(--muted);
+}
+
 .divider {
   height: 1px;
   background: var(--stroke);
