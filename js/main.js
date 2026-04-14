@@ -98,9 +98,7 @@
   const getInitialTheme = () => {
     const saved = localStorage.getItem(THEME_KEY);
     if (saved === 'light' || saved === 'dark') return saved;
-    return window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches
-      ? 'light'
-      : 'dark';
+    return 'dark'; // Por defecto modo oscuro
   };
 
   if (themeToggle) {
